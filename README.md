@@ -10,7 +10,7 @@ Clone the prooject into your desired folder using the following command
 
 clone the ptoject into your desired folder using the command below
 ```
-git clone <https://github.com/eaglebrd/newrepo.git>
+git clone <https://github.com/eaglebrd/wordy.git>
 ```
 
 <!-- r24ngufri2ivk92 -->
