@@ -1,0 +1,3 @@
+Links to the design source
+Navbar: https//getbootstrap.com/docs/5.2/examples/pricing
+Page hero and postlist : https//getbootstrap.com/docs/5.2/examples/jumbotron
