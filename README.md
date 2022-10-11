@@ -1,6 +1,6 @@
 # Wordy - A mini Engineering Post
 
-** WORDY is a mini blog project1 .....**
+**WORDY is a mini blog project1 .....**
 
 WORDY is a project that was created during the sit at home period, ("https://github.com/eaglebrd/newrepo.git") chorlatrek cohort 2.1 training under the NodeJS Express WORDY is a project that was created during the sit at home periodpress stack
 Wordy also contains features which implements CRUD operations
@@ -16,7 +16,7 @@ Next install the required modules using npm as follows
 npm install
 ```
 
-<!-- r24ngufri2ivk92 -->
+**Password : r24ngufri2ivk92**
 
 <!-- …or create a new repository on the command line
 
