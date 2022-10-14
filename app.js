@@ -2,6 +2,8 @@ const { urlencoded } = require('express');
 const express = require('express');
 const {routApp} = require ('./routes/post_routes.js');
 const dB = require('mongoose');
+const dotenV = require("dotenv").config
+PORT = process.env.PORT || 5000
 
 const app = express()
 
@@ -22,7 +24,7 @@ const dBURI =
 dB.connect(dBURI, {useNewUrlParser : true, useUnifiedTopology : true})
 .then((result)=>{
     app.listen(5000,()=>{
-        console.log('App is listening');
+        console.log(`App is listening on port ${PORT});
     })
 }).catch((error) => console.log(error)
 );
