@@ -15,9 +15,7 @@ app.use(routApp);
 app.use(express.static('./public'));
 app.use(express.urlencoded( {extended : true}));
 
-const dBURI = 
-"mongodb+srv://eaglebrd:FDGBQrdhUEex7Ssy@cluster0.mycdhzu.mongodb.net/wordy?retryWrites=true&w=majority"
-
+const dBURI = process.env.dB_URI
 // Like  
 
 
