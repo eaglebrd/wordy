@@ -23,8 +23,8 @@ const dBURI =
 
 dB.connect(dBURI, {useNewUrlParser : true, useUnifiedTopology : true})
 .then((result)=>{
-    app.listen(5000,()=>{
-        console.log(`App is listening on port ${PORT});
+    app.listen(PORT,()=>{
+        console.log(`App is listening on port ${PORT}`);
     })
 }).catch((error) => console.log(error)
 );
