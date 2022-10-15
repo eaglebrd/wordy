@@ -2,7 +2,7 @@ const { urlencoded } = require('express');
 const express = require('express');
 const {routApp} = require ('./routes/post_routes.js');
 const dB = require('mongoose');
-const dotenV = require("dotenv").config
+const dotenV = require("dotenv").config()
 PORT = process.env.PORT || 5000
 
 const app = express()
