@@ -1,7 +1,17 @@
-const { userInfo } = require("../model/user");
+const { V_user } = require("../model/user");
 const flashMessage = require("connect-flash");
 
-const registerUser = (req, res) => {
-  console.log("Do it well");
+const renderRegisterUser = (req, res) => {
+  return res.render("../view/register.ejs");
 };
-module.exports = { registerUser };
+
+const registerUser = (req, res) => {
+  try {
+    const body = req.body;
+    console.log(body);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+module.exports = { registerUser, renderRegisterUser };

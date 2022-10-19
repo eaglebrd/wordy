@@ -31,6 +31,7 @@ dB.connect(dBURI, { useNewUrlParser: true, useUnifiedTopology: true })
 
 // Import Schema
 const { Post } = require("./model/post");
+const { V_user } = require("./model/user.js");
 console.log("lkhg");
 
 // Home page visit
