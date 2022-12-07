@@ -5,19 +5,20 @@ const { hashd_pass_gen } = require("../utils/auth.js");
 const flash = require("connect-flash");
 
 const renderRegisterUser = (req, res) => {
-  const successMessage = req.flash("success");
-  const errorMessage = req.flash("error");
-  return res.render("../view/register.ejs", { successMessage, errorMessage });
+  // const successMessage = req.flash();
+  // const errorMessage = req.flash("error");
+  // res.locals.successMessage = "please register now";
+  // res.locals.errorMessage = "Something went wrong";
+  // req.flash("error", req.body.errorMessage);
+  return res.render("../view/register.ejs");
 };
-
 const registerUser = async (req, res) => {
   try {
-    console.log(req.method, req.path, req.hostname);
     const body = req.body;
-
     if (!body.firstName || !body.lastName || !body.password || !body.email) {
-      req.flash("error", "Please, input all fields");
-      // res.return flash("Incosistent")
+      req.flash("error", "Inconsistent field");
+
+      res.return(flash("error", "Inconsistent field"));
       return res.status(400).redirect("/register");
     }
     body.password = hashd_pass_gen(body.password);
@@ -27,13 +28,13 @@ const registerUser = async (req, res) => {
 
     if (isEgzistingmail) {
       // send error message
-      req.flash("error", "email used by someone else");
+      req.flash("error", "email in existence, pls sign in");
       return res.status(400).redirect("/register");
     }
 
     await new V_user(body).save();
-    req.flash("success", "Register successful, please sign in");
-    console.log(res.locals.successMessage, "done");
+    req.flash("success", "advantage");
+    console.log("(", req.body, res.locals, ")");
     return res.status(201).redirect("/login");
   } catch (error) {
     console.log(error);
@@ -42,4 +43,5 @@ const registerUser = async (req, res) => {
   }
   console.log(res.locals.successMessage);
 };
-module.exports = { registerUser, renderRegisterUser };
+const dashboard = (req, res) => {};
+module.exports = { registerUser, renderRegisterUser, dashboard };
